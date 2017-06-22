@@ -37,9 +37,10 @@
             this.buttonSpenderHinzu = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labelMeldung = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBoxSpenderID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelMeldung = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -86,24 +87,27 @@
             this.buttonSpenderLoeschen.TabIndex = 13;
             this.buttonSpenderLoeschen.Text = "Spender löschen";
             this.buttonSpenderLoeschen.UseVisualStyleBackColor = true;
+            this.buttonSpenderLoeschen.Click += new System.EventHandler(this.buttonSpenderLoeschen_Click);
             // 
             // buttonSpenderAendern
             // 
-            this.buttonSpenderAendern.Location = new System.Drawing.Point(8, 54);
+            this.buttonSpenderAendern.Location = new System.Drawing.Point(8, 64);
             this.buttonSpenderAendern.Name = "buttonSpenderAendern";
             this.buttonSpenderAendern.Size = new System.Drawing.Size(134, 23);
             this.buttonSpenderAendern.TabIndex = 12;
             this.buttonSpenderAendern.Text = "Spender ändern";
             this.buttonSpenderAendern.UseVisualStyleBackColor = true;
+            this.buttonSpenderAendern.Click += new System.EventHandler(this.buttonSpenderAendern_Click);
             // 
             // buttonSpenderHinzu
             // 
-            this.buttonSpenderHinzu.Location = new System.Drawing.Point(8, 12);
+            this.buttonSpenderHinzu.Location = new System.Drawing.Point(73, 12);
             this.buttonSpenderHinzu.Name = "buttonSpenderHinzu";
             this.buttonSpenderHinzu.Size = new System.Drawing.Size(134, 23);
             this.buttonSpenderHinzu.TabIndex = 10;
             this.buttonSpenderHinzu.Text = "Spender hinzufügen";
             this.buttonSpenderHinzu.UseVisualStyleBackColor = true;
+            this.buttonSpenderHinzu.Click += new System.EventHandler(this.buttonSpenderHinzu_Click);
             // 
             // dataGridView1
             // 
@@ -125,14 +129,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Blutentnahme";
             // 
-            // labelMeldung
+            // textBoxSpenderID
             // 
-            this.labelMeldung.AutoSize = true;
-            this.labelMeldung.Location = new System.Drawing.Point(5, 371);
-            this.labelMeldung.Name = "labelMeldung";
-            this.labelMeldung.Size = new System.Drawing.Size(48, 13);
-            this.labelMeldung.TabIndex = 19;
-            this.labelMeldung.Text = "Meldung";
+            this.textBoxSpenderID.Location = new System.Drawing.Point(76, 29);
+            this.textBoxSpenderID.Name = "textBoxSpenderID";
+            this.textBoxSpenderID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSpenderID.TabIndex = 20;
             // 
             // label3
             // 
@@ -143,18 +145,28 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Spender ID:";
             // 
-            // textBoxSpenderID
+            // labelMeldung
             // 
-            this.textBoxSpenderID.Location = new System.Drawing.Point(76, 29);
-            this.textBoxSpenderID.Name = "textBoxSpenderID";
-            this.textBoxSpenderID.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSpenderID.TabIndex = 20;
+            this.labelMeldung.AutoSize = true;
+            this.labelMeldung.Location = new System.Drawing.Point(5, 371);
+            this.labelMeldung.Name = "labelMeldung";
+            this.labelMeldung.Size = new System.Drawing.Size(48, 13);
+            this.labelMeldung.TabIndex = 19;
+            this.labelMeldung.Text = "Meldung";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(148, 78);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(106, 20);
+            this.textBox1.TabIndex = 20;
             // 
             // FormSpender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 386);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelMeldung);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -189,5 +201,6 @@
         private System.Windows.Forms.TextBox textBoxSpenderID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelMeldung;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

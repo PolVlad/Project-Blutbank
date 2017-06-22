@@ -34,7 +34,7 @@ namespace Projekt_Blutbank
                this.Visible = false;
             
         }
-
+        
     
 
         private void FormPatient_FormClosing(object sender, FormClosingEventArgs e)
