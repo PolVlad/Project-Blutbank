@@ -33,7 +33,6 @@
             this.buttonPatientAendern = new System.Windows.Forms.Button();
             this.buttonAnzeigen = new System.Windows.Forms.Button();
             this.buttonPatientLoeschen = new System.Windows.Forms.Button();
-            this.textBoxAnzeigeAuswahl = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonBlutbank = new System.Windows.Forms.Button();
@@ -43,6 +42,7 @@
             this.labelMeldung = new System.Windows.Forms.Label();
             this.textBoxAendernLoeschen = new System.Windows.Forms.TextBox();
             this.dataGridViewBlutbank = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPatient)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBlutbank)).BeginInit();
@@ -95,13 +95,6 @@
             this.buttonPatientLoeschen.Text = "Patient löschen";
             this.buttonPatientLoeschen.UseVisualStyleBackColor = true;
             this.buttonPatientLoeschen.Click += new System.EventHandler(this.buttonPatientLoeschen_Click);
-            // 
-            // textBoxAnzeigeAuswahl
-            // 
-            this.textBoxAnzeigeAuswahl.Location = new System.Drawing.Point(171, 173);
-            this.textBoxAnzeigeAuswahl.Name = "textBoxAnzeigeAuswahl";
-            this.textBoxAnzeigeAuswahl.Size = new System.Drawing.Size(106, 20);
-            this.textBoxAnzeigeAuswahl.TabIndex = 6;
             // 
             // label1
             // 
@@ -183,17 +176,30 @@
             this.dataGridViewBlutbank.Size = new System.Drawing.Size(411, 89);
             this.dataGridViewBlutbank.TabIndex = 23;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "A",
+            "AB",
+            "B",
+            "0"});
+            this.comboBox1.Location = new System.Drawing.Point(171, 173);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(81, 21);
+            this.comboBox1.TabIndex = 24;
+            // 
             // FormPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(722, 384);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridViewBlutbank);
             this.Controls.Add(this.textBoxAendernLoeschen);
             this.Controls.Add(this.labelMeldung);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxAnzeigeAuswahl);
             this.Controls.Add(this.buttonAnzeigen);
             this.Controls.Add(this.buttonPatientLoeschen);
             this.Controls.Add(this.buttonPatientAendern);
@@ -218,7 +224,6 @@
         private System.Windows.Forms.Button buttonPatientAendern;
         private System.Windows.Forms.Button buttonAnzeigen;
         private System.Windows.Forms.Button buttonPatientLoeschen;
-        private System.Windows.Forms.TextBox textBoxAnzeigeAuswahl;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonBlutbank;
@@ -228,5 +233,6 @@
         private System.Windows.Forms.Label labelMeldung;
         private System.Windows.Forms.TextBox textBoxAendernLoeschen;
         private System.Windows.Forms.DataGridView dataGridViewBlutbank;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

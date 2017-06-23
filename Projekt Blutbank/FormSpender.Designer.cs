@@ -30,18 +30,18 @@
         {
             this.buttonEntnehmen = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxAnezigenAuswahl = new System.Windows.Forms.TextBox();
             this.buttonSpenderAnzeigen = new System.Windows.Forms.Button();
             this.buttonSpenderLoeschen = new System.Windows.Forms.Button();
             this.buttonSpenderAendern = new System.Windows.Forms.Button();
             this.buttonSpenderHinzu = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewSpender = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxSpenderID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelMeldung = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpender)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,13 +63,6 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Nach Blutgruppe:";
             // 
-            // textBoxAnezigenAuswahl
-            // 
-            this.textBoxAnezigenAuswahl.Location = new System.Drawing.Point(167, 153);
-            this.textBoxAnezigenAuswahl.Name = "textBoxAnezigenAuswahl";
-            this.textBoxAnezigenAuswahl.Size = new System.Drawing.Size(106, 20);
-            this.textBoxAnezigenAuswahl.TabIndex = 15;
-            // 
             // buttonSpenderAnzeigen
             // 
             this.buttonSpenderAnzeigen.Location = new System.Drawing.Point(8, 151);
@@ -78,6 +71,7 @@
             this.buttonSpenderAnzeigen.TabIndex = 14;
             this.buttonSpenderAnzeigen.Text = "Anzeigen";
             this.buttonSpenderAnzeigen.UseVisualStyleBackColor = true;
+            this.buttonSpenderAnzeigen.Click += new System.EventHandler(this.buttonSpenderAnzeigen_Click);
             // 
             // buttonSpenderLoeschen
             // 
@@ -109,13 +103,13 @@
             this.buttonSpenderHinzu.UseVisualStyleBackColor = true;
             this.buttonSpenderHinzu.Click += new System.EventHandler(this.buttonSpenderHinzu_Click);
             // 
-            // dataGridView1
+            // dataGridViewSpender
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(295, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(411, 352);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridViewSpender.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSpender.Location = new System.Drawing.Point(295, 12);
+            this.dataGridViewSpender.Name = "dataGridViewSpender";
+            this.dataGridViewSpender.Size = new System.Drawing.Size(411, 352);
+            this.dataGridViewSpender.TabIndex = 9;
             // 
             // groupBox1
             // 
@@ -161,25 +155,38 @@
             this.textBox1.Size = new System.Drawing.Size(106, 20);
             this.textBox1.TabIndex = 20;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "A",
+            "AB",
+            "B",
+            "0"});
+            this.comboBox1.Location = new System.Drawing.Point(167, 153);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(81, 21);
+            this.comboBox1.TabIndex = 25;
+            // 
             // FormSpender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 386);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelMeldung);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBoxAnezigenAuswahl);
             this.Controls.Add(this.buttonSpenderAnzeigen);
             this.Controls.Add(this.buttonSpenderLoeschen);
             this.Controls.Add(this.buttonSpenderAendern);
             this.Controls.Add(this.buttonSpenderHinzu);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewSpender);
             this.Name = "FormSpender";
             this.Text = "FormSpender";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSpender_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpender)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -191,16 +198,16 @@
 
         private System.Windows.Forms.Button buttonEntnehmen;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxAnezigenAuswahl;
         private System.Windows.Forms.Button buttonSpenderAnzeigen;
         private System.Windows.Forms.Button buttonSpenderLoeschen;
         private System.Windows.Forms.Button buttonSpenderAendern;
         private System.Windows.Forms.Button buttonSpenderHinzu;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewSpender;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxSpenderID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelMeldung;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

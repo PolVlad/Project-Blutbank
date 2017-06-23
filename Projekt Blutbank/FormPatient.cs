@@ -7,15 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace Projekt_Blutbank
 {
     public partial class FormPatient : Form
     {
+        OleDbConnection con;
+        OleDbDataAdapter adpPatient;
+        OleDbDataAdapter adpBlutbank;
+        DataSet dsPatient;
+        DataSet dsBlutbank;
+
+
         public FormPatient()
         {
             InitializeComponent();
+            Initialize();
         }
+
+        private void Initialize()
+        {
+            con = new OleDbConnection(Properties.Settings.Default.DBcon);
+            adpPatient = new OleDbDataAdapter("select * from tPatient", con);
+            adpBlutbank = new OleDbDataAdapter("select * from tBlutbank", con);
+            dsPatient = new DataSet();
+            dsBlutbank = new DataSet();
+
+            anzeigen();
+            //adpBestellung = new OleDbDataAdapter("select * from tBestellung", con);
+            //CreateCmdObjectKunde();
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -69,12 +92,20 @@ namespace Projekt_Blutbank
 
         private void anzeigen()
         {
+            dsPatient.Clear();
+            adpPatient.Fill(dsPatient, "Patient");
+            dataGridViewPatient.DataSource = dsPatient.Tables["Patient"];
+
+            dsBlutbank.Clear();
+            adpBlutbank.Fill(dsBlutbank, "Blutbank");
+            dataGridViewBlutbank.DataSource = dsBlutbank.Tables["Blutbank"];
+
 
         }
 
         private void buttonAnzeigen_Click(object sender, EventArgs e)
         {
-            anzeigen();
+            //nach blutgruppe suchen
         }
 
        
