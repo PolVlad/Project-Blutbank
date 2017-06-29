@@ -62,6 +62,7 @@
     <Compile Include="FormSpender.Designer.cs">
       <DependentUpon>FormSpender.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="PatientHinzufügen.cs">
       <SubType>Form</SubType>
     </Compile>

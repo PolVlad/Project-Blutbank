@@ -32,7 +32,6 @@
             this.buttonBestätigen = new System.Windows.Forms.Button();
             this.textBoxWohnort = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxBluttgruppe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxVorname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxPatientId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxBlutgruppe = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonAbbrechen
@@ -50,6 +50,7 @@
             this.buttonAbbrechen.TabIndex = 23;
             this.buttonAbbrechen.Text = "Abbrechen";
             this.buttonAbbrechen.UseVisualStyleBackColor = true;
+            this.buttonAbbrechen.Click += new System.EventHandler(this.buttonAbbrechen_Click_1);
             // 
             // buttonBestätigen
             // 
@@ -59,6 +60,7 @@
             this.buttonBestätigen.TabIndex = 22;
             this.buttonBestätigen.Text = "Bestätigen";
             this.buttonBestätigen.UseVisualStyleBackColor = true;
+            this.buttonBestätigen.Click += new System.EventHandler(this.buttonBestätigen_Click_1);
             // 
             // textBoxWohnort
             // 
@@ -75,13 +77,6 @@
             this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 20;
             this.label5.Text = "Wohnort";
-            // 
-            // textBoxBluttgruppe
-            // 
-            this.textBoxBluttgruppe.Location = new System.Drawing.Point(101, 135);
-            this.textBoxBluttgruppe.Name = "textBoxBluttgruppe";
-            this.textBoxBluttgruppe.Size = new System.Drawing.Size(159, 20);
-            this.textBoxBluttgruppe.TabIndex = 19;
             // 
             // label3
             // 
@@ -141,16 +136,30 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "PatientID";
             // 
+            // comboBoxBlutgruppe
+            // 
+            this.comboBoxBlutgruppe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBlutgruppe.FormattingEnabled = true;
+            this.comboBoxBlutgruppe.Items.AddRange(new object[] {
+            "0",
+            "A",
+            "AB",
+            "B"});
+            this.comboBoxBlutgruppe.Location = new System.Drawing.Point(101, 135);
+            this.comboBoxBlutgruppe.Name = "comboBoxBlutgruppe";
+            this.comboBoxBlutgruppe.Size = new System.Drawing.Size(159, 21);
+            this.comboBoxBlutgruppe.TabIndex = 24;
+            // 
             // PatientÄndern
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 287);
+            this.Controls.Add(this.comboBoxBlutgruppe);
             this.Controls.Add(this.buttonAbbrechen);
             this.Controls.Add(this.buttonBestätigen);
             this.Controls.Add(this.textBoxWohnort);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxBluttgruppe);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxVorname);
             this.Controls.Add(this.label4);
@@ -171,7 +180,6 @@
         private System.Windows.Forms.Button buttonBestätigen;
         private System.Windows.Forms.TextBox textBoxWohnort;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxBluttgruppe;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxVorname;
         private System.Windows.Forms.Label label4;
@@ -179,5 +187,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxPatientId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxBlutgruppe;
     }
 }

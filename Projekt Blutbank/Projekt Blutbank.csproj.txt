@@ -1,0 +1,15 @@
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\bin\Debug\Projekt Blutbank.exe.config
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\bin\Debug\Projekt Blutbank.exe
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\bin\Debug\Projekt Blutbank.pdb
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt Blutbank.csprojResolveAssemblyReference.cache
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt_Blutbank.Form1.resources
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt_Blutbank.FormPatient.resources
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt_Blutbank.FormSpender.resources
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt_Blutbank.PatientHinzufügen.resources
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt_Blutbank.PatientÄndern.resources
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt_Blutbank.Properties.Resources.resources
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt Blutbank.csproj.GenerateResource.Cache
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt Blutbank.exe
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt Blutbank.pdb
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt_Blutbank.SpenderHinzufügen.resources
+H:\FI11\C#\Visual Studios\Projekt Blutbank\Projekt Blutbank\obj\Debug\Projekt_Blutbank.SpenderÄndern.resources

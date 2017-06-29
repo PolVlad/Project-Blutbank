@@ -78,11 +78,11 @@
             // 
             // buttonAnzeigen
             // 
-            this.buttonAnzeigen.Location = new System.Drawing.Point(12, 171);
+            this.buttonAnzeigen.Location = new System.Drawing.Point(12, 157);
             this.buttonAnzeigen.Name = "buttonAnzeigen";
-            this.buttonAnzeigen.Size = new System.Drawing.Size(134, 23);
+            this.buttonAnzeigen.Size = new System.Drawing.Size(134, 37);
             this.buttonAnzeigen.TabIndex = 5;
-            this.buttonAnzeigen.Text = "Anzeigen";
+            this.buttonAnzeigen.Text = "alle Anzeigen";
             this.buttonAnzeigen.UseVisualStyleBackColor = true;
             this.buttonAnzeigen.Click += new System.EventHandler(this.buttonAnzeigen_Click);
             // 
@@ -188,6 +188,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(81, 21);
             this.comboBox1.TabIndex = 24;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FormPatient
             // 
