@@ -39,7 +39,7 @@
             this.textBoxSpenderID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.labelMeldung = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxAendernLoeschen = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSpender)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -51,7 +51,7 @@
             this.buttonEntnehmen.Name = "buttonEntnehmen";
             this.buttonEntnehmen.Size = new System.Drawing.Size(128, 23);
             this.buttonEntnehmen.TabIndex = 17;
-            this.buttonEntnehmen.Text = "Entnehmen";
+            this.buttonEntnehmen.Text = "Annehmen";
             this.buttonEntnehmen.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -65,11 +65,11 @@
             // 
             // buttonSpenderAnzeigen
             // 
-            this.buttonSpenderAnzeigen.Location = new System.Drawing.Point(8, 151);
+            this.buttonSpenderAnzeigen.Location = new System.Drawing.Point(17, 141);
             this.buttonSpenderAnzeigen.Name = "buttonSpenderAnzeigen";
-            this.buttonSpenderAnzeigen.Size = new System.Drawing.Size(134, 23);
+            this.buttonSpenderAnzeigen.Size = new System.Drawing.Size(134, 33);
             this.buttonSpenderAnzeigen.TabIndex = 14;
-            this.buttonSpenderAnzeigen.Text = "Anzeigen";
+            this.buttonSpenderAnzeigen.Text = "alle Anzeigen";
             this.buttonSpenderAnzeigen.UseVisualStyleBackColor = true;
             this.buttonSpenderAnzeigen.Click += new System.EventHandler(this.buttonSpenderAnzeigen_Click);
             // 
@@ -121,7 +121,7 @@
             this.groupBox1.Size = new System.Drawing.Size(265, 125);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Blutentnahme";
+            this.groupBox1.Text = "Blutannahme";
             // 
             // textBoxSpenderID
             // 
@@ -148,15 +148,16 @@
             this.labelMeldung.TabIndex = 19;
             this.labelMeldung.Text = "Meldung";
             // 
-            // textBox1
+            // textBoxAendernLoeschen
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(106, 20);
-            this.textBox1.TabIndex = 20;
+            this.textBoxAendernLoeschen.Location = new System.Drawing.Point(148, 78);
+            this.textBoxAendernLoeschen.Name = "textBoxAendernLoeschen";
+            this.textBoxAendernLoeschen.Size = new System.Drawing.Size(106, 20);
+            this.textBoxAendernLoeschen.TabIndex = 20;
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "A",
@@ -167,6 +168,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(81, 21);
             this.comboBox1.TabIndex = 25;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // FormSpender
             // 
@@ -174,7 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(718, 386);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxAendernLoeschen);
             this.Controls.Add(this.labelMeldung);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
@@ -207,7 +209,7 @@
         private System.Windows.Forms.TextBox textBoxSpenderID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label labelMeldung;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxAendernLoeschen;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

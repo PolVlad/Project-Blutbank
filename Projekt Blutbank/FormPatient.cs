@@ -19,6 +19,10 @@ namespace Projekt_Blutbank
         OleDbCommand cmd;
         DataSet dsPatient;
         DataSet dsBlutbank;
+        Int32 bestandA;
+        Int32 bestandB;
+        Int32 bestand0;
+        Int32 bestandAB;
 
 
 
@@ -185,5 +189,148 @@ namespace Projekt_Blutbank
             }
 
         }
+
+        private void buttonEntnehmen_Click(object sender, EventArgs e)
+        {
+            blutEntnehmen();
+        }
+
+        private void blutEntnehmen()
+        {
+            //Blutgruppe erfahren
+            OleDbCommand cmd1 = con.CreateCommand();
+            cmd1.CommandText = "Select Bluttgruppe from tPatient where PatientID = " + textBoxPatientID.Text;
+            cmd1.CommandType = CommandType.Text;
+            //cmd1.CommandType = CommandType.Text;
+            String blutgruppe = (String)cmd1.ExecuteScalar();
+
+
+
+
+
+
+
+            //Reserven prüfen
+
+            
+
+            //0
+            OleDbCommand cmd2 = con.CreateCommand();
+            cmd2.CommandText = "Select Anzahl from tBlutbank where Blutgruppe = '0'";
+            cmd2.CommandType = CommandType.Text;
+
+            bestand0 = (Int32)cmd2.ExecuteScalar();
+            
+
+            //A
+            OleDbCommand cmd3 = con.CreateCommand();
+            cmd3.CommandText = "Select Anzahl from tBlutbank where Blutgruppe = 'A'";
+            cmd3.CommandType = CommandType.Text;
+            bestandA = (Int32)cmd3.ExecuteScalar();
+
+
+            //AB
+            OleDbCommand cmd4 = con.CreateCommand();
+            cmd4.CommandText = "Select Anzahl from tBlutbank where Blutgruppe = 'AB'";
+            cmd4.CommandType = CommandType.Text;
+            bestandAB = (Int32)cmd4.ExecuteScalar();
+
+
+            //B
+            OleDbCommand cmd5 = con.CreateCommand();
+            cmd5.CommandText = "Select Anzahl from tBlutbank where Blutgruppe = 'B'";
+            cmd5.CommandType = CommandType.Text;
+             bestandB = (Int32)cmd5.ExecuteScalar();
+
+
+
+            if (blutgruppe.Equals("A"))
+            {
+                prüfeA();
+            }
+
+            else if (blutgruppe.Equals("B"))
+            {
+                prüfeB();
+            }
+
+            else if (blutgruppe.Equals("AB"))
+            {
+                prüfeAB();
+            }
+            else if (blutgruppe.Equals("0"))
+            {
+                prüfe0();
+            }
+
+        }
+
+        private void prüfeA()
+        {
+            if (bestandA > 0)
+            {
+                entnehmeBlut("A");
+            }
+            else
+            {
+                prüfe0();
+            }
+
+        }
+
+       private void prüfeB()
+       {
+            if (bestandB > 0)
+            {
+                entnehmeBlut("B");
+            }
+            else
+            {
+                prüfe0();
+            }
+        }
+
+
+       private void prüfeAB()
+       {
+            if (bestandAB > 0)
+            {
+                entnehmeBlut("AB");
+            }
+            else if(bestandA >= 0)
+            {
+                entnehmeBlut("A");
+            }
+            else
+            {
+                prüfeB();
+            }
+        }
+
+      private void prüfe0()
+      {
+           if (bestand0 > 0)
+            {
+                entnehmeBlut("0");
+            }
+            else
+            {
+               labelMeldung.Text = "Leider haben wir derzeit nicht genügend Blutreserven";
+             }
+        }
+
+        private void entnehmeBlut(String blut)
+        {
+
+            OleDbCommand cmdEntnehmen = con.CreateCommand();
+            cmdEntnehmen.CommandText = "Update tBlutbank set Anzahl = Anzahl - 1 where Blutgruppe = '" + blut + "'";
+            cmdEntnehmen.CommandType = CommandType.Text;
+
+            cmdEntnehmen.ExecuteNonQuery();
+
+            labelMeldung.Text = "Blutentnahme erfolgreich";
+            anzeigen();
+        }
+        
     }
 }

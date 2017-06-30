@@ -30,9 +30,8 @@
         {
             this.buttonAbbrechen = new System.Windows.Forms.Button();
             this.buttonBestätigen = new System.Windows.Forms.Button();
-            this.textBoxLetzteSpende = new System.Windows.Forms.TextBox();
+            this.textBoxWohnort = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBoxBluttgruppe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxVorname = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxSpenderId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxBlutgruppe = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // buttonAbbrechen
@@ -50,6 +50,7 @@
             this.buttonAbbrechen.TabIndex = 35;
             this.buttonAbbrechen.Text = "Abbrechen";
             this.buttonAbbrechen.UseVisualStyleBackColor = true;
+            this.buttonAbbrechen.Click += new System.EventHandler(this.buttonAbbrechen_Click_1);
             // 
             // buttonBestätigen
             // 
@@ -59,29 +60,23 @@
             this.buttonBestätigen.TabIndex = 34;
             this.buttonBestätigen.Text = "Bestätigen";
             this.buttonBestätigen.UseVisualStyleBackColor = true;
+            this.buttonBestätigen.Click += new System.EventHandler(this.buttonBestätigen_Click_1);
             // 
-            // textBoxLetzteSpende
+            // textBoxWohnort
             // 
-            this.textBoxLetzteSpende.Location = new System.Drawing.Point(116, 182);
-            this.textBoxLetzteSpende.Name = "textBoxLetzteSpende";
-            this.textBoxLetzteSpende.Size = new System.Drawing.Size(159, 20);
-            this.textBoxLetzteSpende.TabIndex = 33;
+            this.textBoxWohnort.Location = new System.Drawing.Point(116, 182);
+            this.textBoxWohnort.Name = "textBoxWohnort";
+            this.textBoxWohnort.Size = new System.Drawing.Size(159, 20);
+            this.textBoxWohnort.TabIndex = 33;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(27, 185);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 13);
+            this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 32;
-            this.label5.Text = "Letzte Spende";
-            // 
-            // textBoxBluttgruppe
-            // 
-            this.textBoxBluttgruppe.Location = new System.Drawing.Point(116, 143);
-            this.textBoxBluttgruppe.Name = "textBoxBluttgruppe";
-            this.textBoxBluttgruppe.Size = new System.Drawing.Size(159, 20);
-            this.textBoxBluttgruppe.TabIndex = 31;
+            this.label5.Text = "Wohnort";
             // 
             // label3
             // 
@@ -126,6 +121,7 @@
             // 
             // textBoxSpenderId
             // 
+            this.textBoxSpenderId.Enabled = false;
             this.textBoxSpenderId.Location = new System.Drawing.Point(116, 21);
             this.textBoxSpenderId.Name = "textBoxSpenderId";
             this.textBoxSpenderId.Size = new System.Drawing.Size(159, 20);
@@ -140,16 +136,30 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "SpenderID";
             // 
+            // comboBoxBlutgruppe
+            // 
+            this.comboBoxBlutgruppe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxBlutgruppe.FormattingEnabled = true;
+            this.comboBoxBlutgruppe.Items.AddRange(new object[] {
+            "0",
+            "A",
+            "AB",
+            "B"});
+            this.comboBoxBlutgruppe.Location = new System.Drawing.Point(116, 143);
+            this.comboBoxBlutgruppe.Name = "comboBoxBlutgruppe";
+            this.comboBoxBlutgruppe.Size = new System.Drawing.Size(159, 21);
+            this.comboBoxBlutgruppe.TabIndex = 36;
+            // 
             // SpenderÄndern
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(310, 285);
+            this.Controls.Add(this.comboBoxBlutgruppe);
             this.Controls.Add(this.buttonAbbrechen);
             this.Controls.Add(this.buttonBestätigen);
-            this.Controls.Add(this.textBoxLetzteSpende);
+            this.Controls.Add(this.textBoxWohnort);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxBluttgruppe);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxVorname);
             this.Controls.Add(this.label4);
@@ -168,9 +178,8 @@
 
         private System.Windows.Forms.Button buttonAbbrechen;
         private System.Windows.Forms.Button buttonBestätigen;
-        private System.Windows.Forms.TextBox textBoxLetzteSpende;
+        private System.Windows.Forms.TextBox textBoxWohnort;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBoxBluttgruppe;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxVorname;
         private System.Windows.Forms.Label label4;
@@ -178,5 +187,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxSpenderId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxBlutgruppe;
     }
 }

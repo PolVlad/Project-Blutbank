@@ -151,6 +151,7 @@
             this.buttonEntnehmen.TabIndex = 17;
             this.buttonEntnehmen.Text = "Entnehmen";
             this.buttonEntnehmen.UseVisualStyleBackColor = true;
+            this.buttonEntnehmen.Click += new System.EventHandler(this.buttonEntnehmen_Click);
             // 
             // labelMeldung
             // 
@@ -178,6 +179,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "A",
