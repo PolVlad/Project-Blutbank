@@ -25,6 +25,7 @@ namespace Projekt_Blutbank
         {
             InitializeComponent();
             this.con = con;
+            comboBoxBlutgruppe.SelectedIndex = 1;
         }
 
 
@@ -74,12 +75,16 @@ namespace Projekt_Blutbank
 
         private void buttonBestätigen_Click_1(object sender, EventArgs e)
         {
+           
+
             Spender s = new Spender();
 
             s.Nachname = textBoxNachname.Text;
             s.Vorname = textBoxVorname.Text;
             s.Blutgruppe = "" + comboBoxBlutgruppe.SelectedItem;
             s.Wohnort = textBoxWohnort.Text;
+
+           
 
             insertDB(s);
         }

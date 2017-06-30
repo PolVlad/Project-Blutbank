@@ -25,6 +25,7 @@ namespace Projekt_Blutbank
         public PatientHinzufügen(OleDbConnection connnection):this()
         {
             this.con = connnection;
+            comboBoxBlutgruppe.SelectedIndex = 1;
            
         }
 
