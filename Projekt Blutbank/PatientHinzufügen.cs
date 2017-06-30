@@ -31,6 +31,8 @@ namespace Projekt_Blutbank
 
         private void buttonBestätigen_Click(object sender, EventArgs e)
         {
+
+
             Patient p = new Patient();
           
             p.Nachname = textBoxNachname.Text;
@@ -38,7 +40,16 @@ namespace Projekt_Blutbank
             p.Blutgruppe = ""+comboBoxBlutgruppe.SelectedItem;
             p.Wohnort = textBoxWohnort.Text;
 
-            insertDB(p);
+            if (textBoxNachname.Text != "" && textBoxVorname.Text != "" && textBoxWohnort.Text != "")
+            {
+                insertDB(p);
+                this.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Bitte alle Daten ausfüllen!");
+            }
         }
 
         private void insertDB(Patient p)
